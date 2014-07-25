@@ -6,12 +6,12 @@
 ## This function takes a matrix and provides the handling functions to get & set the matrix & inverse
 
 makeCacheMatrix <- function(x = matrix()) {
-        m <- NULL
+        i <- NULL
         
         ##Set new matrix
         set <- function(y=matrix()){
                 x <<- y
-                m <<- NULL
+                i <<- NULL
         }
         
         ##Get the matrix
@@ -20,13 +20,13 @@ makeCacheMatrix <- function(x = matrix()) {
         }
         
         ##Set the inverse of the matrix
-        setinverse <- function(mean){
-                m <<- mean
+        setinverse <- function(inverse){
+                i <<- inverse
         }
         
         ##Get the inverse of the matrix
         getinverse <- function(){
-                m
+                i
         }
         
         ##Return a list of the handler functions
